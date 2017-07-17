@@ -1,3 +1,5 @@
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -23,6 +25,7 @@ import { photosRouting } from "./photos/photos.routing";
     HomeComponent,
     NotFoundComponent
   ],
+  providers : [AuthService,AuthGuard],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
