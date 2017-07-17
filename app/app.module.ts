@@ -8,12 +8,14 @@ import { NotFoundComponent } from './not-found.component';
 import { MessagesModule } from './messages/messages.module'; 
 import { PhotosModule } from './photos/photos.module';
 import { routing} from './app.routing';
+import { photosRouting } from "./photos/photos.routing";
 
 @NgModule({
   imports: [
     BrowserModule,
     MessagesModule,
     PhotosModule,
+    photosRouting,
     routing
   ],
   declarations: [ 
