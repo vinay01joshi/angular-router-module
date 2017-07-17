@@ -1,6 +1,8 @@
 
 import { Component } from '@angular/core';
 import { MessagesService } from './messages.service'; 
+import { FormComponent } from "../form-component";
+import { FormGroup } from "@angular/forms";
 
 @Component({
     selector: 'messages',
@@ -11,7 +13,13 @@ import { MessagesService } from './messages.service';
     </ul>
     `
 })
-export class MessagesComponent {
+export class MessagesComponent implements FormComponent {
+    hasUnsavedChanges(): Boolean {
+         //form: FormGroup;
+         // make form group implementation here
+         return true; 
+    }
+   
     messages;
     title = "New Message"
 
